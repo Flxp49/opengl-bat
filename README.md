@@ -1,7 +1,7 @@
 # Setup OpenGL for VSC + Bat Script
 
-### Prerequisites 
-- Install MinGW, follow this guide until Step 6 of the Prerequisites Section [https://code.visualstudio.com/docs/cpp/config-mingw](https://code.visualstudio.com/docs/cpp/config-mingw)
+### Setup
+- Install MinGW, follow the VSC guide (Prerequisites Section **ONLY**) [https://code.visualstudio.com/docs/cpp/config-mingw](https://code.visualstudio.com/docs/cpp/config-mingw)
 - Download the [freeglut package](https://www.transmissionzero.co.uk/computing/using-glut-with-mingw/) and store it a common folder accessible by all like: "C:\Program Files\Common Files\freeglut"
 - Copy the contents of "freeglut\include\GL" to the MinGW folder: "C:\msys64\mingw64\include\GL"
 - Copy the contents of "freeglut\lib\x64" to the MinGW folder: "C:\msys64\mingw64\lib"
