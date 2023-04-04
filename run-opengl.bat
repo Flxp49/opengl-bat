@@ -1,17 +1,26 @@
+:: Set your file name includng the extension, example: set filename=main.cpp
+set filename=cpu.cpp
+
+:: Getting filename and extension
+for /f "tokens=1,2 delims=." %%a in ("%filename%") do (
+  set file=%%a
+  set ext=%%b
+)
+
 :: Changing working directory to the bat file directory
 cd "%~dp0"
 
 :: Compiling object file 
 echo "Compiling"
-g++ -c -o main.o main.cpp -I"C:\Program Files\Common Files\freeglut\include"   
+g++ -c -o %file%.o %file%.%ext% -I"C:\Program Files\Common Files\freeglut\include"   
 cls
 
 :: Linking 
 echo "Linking"
-g++ -o main.exe main.o -L"C:\Program Files\Common Files\freeglut\lib" -lfreeglut -lopengl32 -lglu32 
-del main.o
+g++ -o %file%.exe %file%.o -L"C:\Program Files\Common Files\freeglut\lib" -lfreeglut -lopengl32 -lglu32 
+del %file%.o
 cls
 
-:: Execute 
+:: Executing the exe
 echo "App Running"
-main.exe
+%file%.exe
