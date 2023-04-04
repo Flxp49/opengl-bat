@@ -1,5 +1,5 @@
 :: Set your file name includng the extension, example: set filename=main.cpp
-set filename=cpu.cpp
+set filename=filename.extension
 
 :: Getting filename and extension
 for /f "tokens=1,2 delims=." %%a in ("%filename%") do (
