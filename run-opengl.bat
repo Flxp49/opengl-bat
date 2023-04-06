@@ -13,13 +13,11 @@ cd "%~dp0"
 :: Compiling object file 
 echo "Compiling"
 g++ -c -o %file%.o %file%.%ext% -I"C:\Program Files\Common Files\freeglut\include"   
-cls
 
 :: Linking 
 echo "Linking"
 g++ -o %file%.exe %file%.o -L"C:\Program Files\Common Files\freeglut\lib" -lfreeglut -lopengl32 -lglu32 
 del %file%.o
-cls
 
 :: Executing the exe
 echo "App Running"
